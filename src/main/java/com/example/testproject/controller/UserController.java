@@ -4,6 +4,7 @@ import com.example.testproject.dto.request.UserRequest;
 import com.example.testproject.dto.response.UserResponse;
 import com.example.testproject.service.UserService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,7 @@ import static lombok.AccessLevel.PRIVATE;
 @RestController
 @RequestMapping("/api/v1/user")
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UserController {
     UserService userService;
 
