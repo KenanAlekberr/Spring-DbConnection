@@ -6,7 +6,7 @@ import com.example.testproject.exception.UserNotFoundException;
 import com.example.testproject.model.UserEntity;
 import com.example.testproject.repository.UserRepository;
 import com.example.testproject.service.UserService;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Service
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     UserRepository userRepository;
 
